@@ -58,6 +58,8 @@ cd ../processed/user_logs
 rm -r ./*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
+cd /Users/michelleliu/dsi_shell/02_activities/assignments/data
+touch inventory.txt
 cd /Users/michelleliu/dsi_shell/02_activities/assignments/data/processed/event_logs
 ls -a >/Users/michelleliu/dsi_shell/02_activities/assignments/data/inventory.txt
 cd /Users/michelleliu/dsi_shell/02_activities/assignments/data/processed/server_logs

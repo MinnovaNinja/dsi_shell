@@ -54,19 +54,24 @@ cp ./*event*.log ../processed/event_logs
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 
-rm -r ./*ipaddr* 
-cd ../processed/user_logs
-rm -r ./*ipaddr*
+rm -f ./data/raw/*ipaddr* 
+rm -f ./data/processed/user_logs/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-cd /Users/michelleliu/dsi_shell/02_activities/assignments/data
-touch inventory.txt
-cd /Users/michelleliu/dsi_shell/02_activities/assignments/data/processed/event_logs
-ls -a >/Users/michelleliu/dsi_shell/02_activities/assignments/data/inventory.txt
-cd /Users/michelleliu/dsi_shell/02_activities/assignments/data/processed/server_logs
-ls -a >>/Users/michelleliu/dsi_shell/02_activities/assignments/data/inventory.txt
-cd /Users/michelleliu/dsi_shell/02_activities/assignments/data/processed/user_logs
-ls -a >>/Users/michelleliu/dsi_shell/02_activities/assignments/data/inventory.txt
+#cd ./data/processed
+#touch inventory.txt no need 
+
+#cd ./data/processed/event_logs
+#ls -a > ./data/inventory.txt
+#cd ./data/processed/server_logs
+#ls -a >> ./data/inventory.txt
+#cd ./data/processed/user_logs
+#ls -a >> ./data/inventory.txt
+
+ls data/processed/event_logs -a > data/inventory.txt
+# Append contents of server_logs and user_logs
+ls data/processed/server_logs -a >> data/inventory.txt
+ls data/processed/user_logs -a >> data/inventory.txt
 
 
 

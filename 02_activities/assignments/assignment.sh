@@ -8,7 +8,7 @@ set -x
 # for a new project. It also creates a README file with the
 # project name and a brief description of the project.
 # Then it unzips the raw data provided by the client.
-#Going to make some changes in my assignment April 15
+#Going to make some changes in my assignment April 15 second attempt
 
 mkdir analysis output
 touch README.md

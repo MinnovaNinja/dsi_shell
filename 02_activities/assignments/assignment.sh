@@ -30,15 +30,16 @@ mkdir data
 mv ./rawdata ./data/raw
 
 # 3. List the contents of the ./data/raw directory
-cd ./data/raw
+cd ./data/raw/directory
 ls 
 
 
 # 4. In ./data/processed, create the following directories: server_logs, user_logs, and event_logs
-cd /Users/michelleliu/dsi_shell/02_activities/assignments/data/
-mkdir processed
-cd /Users/michelleliu/dsi_shell/02_activities/assignments/data/processed
-mkdir server_logs user_logs event_logs
+mkdir -p data/processed/server_logs
+mkdir -p data/processed/user_logs
+mkdir -p data/processed/event_logs
+
+
 
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs

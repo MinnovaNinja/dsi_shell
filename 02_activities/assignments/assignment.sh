@@ -8,7 +8,7 @@ set -x
 # for a new project. It also creates a README file with the
 # project name and a brief description of the project.
 # Then it unzips the raw data provided by the client.
-#Going to make some changes in my assignment April 15 second attempt
+#Going to make some changes in my assignment April 17 second attempt
 
 mkdir analysis output
 touch README.md
@@ -23,14 +23,13 @@ unzip -q rawdata.zip
 # Complete assignment here
 
 # 1. Create a directory named data
-cd /Users/michelleliu/dsi_shell/02_activities/assignments
 mkdir data
 
 # 2. Move the ./rawdata directory to ./data/raw
 mv ./rawdata ./data/raw
 
 # 3. List the contents of the ./data/raw directory
-cd ./data/raw/directory
+cd ./data/raw
 ls 
 
 
